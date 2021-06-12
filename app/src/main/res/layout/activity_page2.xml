@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".page2">
+
+    <ImageView
+        android:layout_width="528dp"
+        android:layout_height="900dp"
+        android:layout_marginTop="-250px"
+        android:src="@drawable/background" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama : "
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="50dp"
+        android:textSize="30dp"></TextView>
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="188dp"
+        android:layout_marginTop="50dp"
+        android:textSize="30dp"></TextView>
+
+    <Button
+        android:id="@+id/toEvent"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="150dp"
+        android:alpha="0.1"
+        android:onClick="toEvent"></Button>
+
+    <TextView
+        android:id="@+id/eventTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:layout_marginLeft="140dp"
+        android:textSize="30dp"/>
+
+    <Button
+        android:id="@+id/toGuest"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="250dp"
+        android:alpha="0.1"
+        android:onClick="toGuest"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="270dp"
+        android:layout_marginLeft="140dp"
+        android:text="Pilih Guest"
+        android:textSize="30dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
