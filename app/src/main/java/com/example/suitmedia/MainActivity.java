@@ -15,11 +15,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private EditText name;
     private Button toPage2;
+    private TextView textViewStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         name = findViewById(R.id.name);
         toPage2 = findViewById(R.id.toPage2);
-
+        textViewStatus = findViewById(R.id.textViewStatus);
 
         toPage2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,29 +37,28 @@ public class MainActivity extends AppCompatActivity {
                 String username = name.getText().toString();
 
                 Intent intent = new Intent(MainActivity.this, page2.class);
-                intent.putExtra("keyname",username);
+                intent.putExtra("keyname", username);
                 intent.putExtra("eventTitle", "Pilih Event");
                 startActivity(intent);
             }
         });
     }
 
+    public void buttonCheckPalindrome (View view){
+            char[] charInput = name.getText().toString().toCharArray();
+            int intLength = charInput.length;
+            boolean isPalindrome = true;
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+            for (int i = 0; i < intLength / 2; i++) {
+                if (charInput[i] != charInput[intLength - 1 - i]) {
+                    isPalindrome = false;
+                    break;
+                }
+            }
+            if (isPalindrome) {
+                textViewStatus.setText("isPalindrome");
+            } else {
+                textViewStatus.setText("not palindrome");
+            }
         }
-
-        return super.onOptionsItemSelected(item);
     }
-}

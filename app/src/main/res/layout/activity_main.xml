@@ -56,6 +56,13 @@
         android:textColor="@color/cardview_light_background"
         android:inputType="textPersonName"/>
 
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="250dp"/>
+
     <Button
         android:id="@+id/toPage2"
         android:layout_width="380dp"
@@ -71,6 +78,18 @@
         android:layout_marginLeft="160dp"
         android:text="Selesai"
         android:textSize="30dp"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="440dp"
+        android:layout_marginLeft="80dp"
+        android:onClick="buttonCheckPalindrome"
+        android:text="check"
+        android:alpha="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextInputWord" />
 
 
 <!--    <include-->
